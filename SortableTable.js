@@ -15,7 +15,7 @@ sortObj.setCellRenderer((col, row) => {
     }
     // cell-is-not-a-header
     if (typeof colValue !== 'undefined') {
-        if (col.id === 'url') {
+        if (col.id === 'karaoke') {
             return `<td><a href="${colValue}" target="_blank">${colValue}</a></td>`;
         }
         return `<td>${colValue}</td>`;
@@ -31,7 +31,7 @@ singableList.forEach(x => items.push({
     classification: x[0],
     name: x[1],
     JASRAC:x[2],
-    NexTone:x[3]
+    karaoke:x[3]
 }));
 sortObj.setData(items);
 
